@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lego Collection</title>
+    <link rel="stylesheet" href="/css/main.css" />
+</head>
+
+<body tabindex="-1">
+
+  
+ <%- include('partials/navbar', {page: '/home'}) %>
+
+    <div class="container mx-auto p-4">
+      <div class="hero bg-base-200 rounded-lg p-6">
+        <div class="hero-content text-center ">
+          <div class="max-w-md">
+            <h1 class="text-5xl font-bold">Welcome</h1>
+            <p class="py-6">Welcome to our Lego wonderland! Explore endless possibilities, spark creativity, and build your dreams brick by brick. 
+              Dive into a world of imagination where every creation tells a story. Let's build together!</p>
+            <a href="/lego/sets" class="btn btn-secondary" >GET STARTED NOW</a>
+          </div>
+      </div>
+     </div>  
+
+
+    <!-- grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-20 mt-8">
+
+        <!-- Card 1 -->
+        <div class="hover:scale-125 transition duration-300">
+          <div class="card bg-base 100 shadow-xl">
+            <figure><img src="https://cdn.rebrickable.com/media/sets/76225-1.jpg" alt="Lego Set Miles Morales"></figure>
+          <div class="card-body">
+              <h2 class="card-title">Miles Morales</h2>
+              <p>This set was released in America (USA/CAN) by Marvel Studios in 2022. It was released following the Spider Man break out cartoon Into the Multi-Verse</p>
+          <div class="card-actions justify-end"><a href="/lego/sets/76225-1" class="btn btn-secondary">View</a></div>
+          </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="hover:scale-125 transition duration-300"> 
+          <div class="card bg-base 100 shadow-xl">
+            <figure><img src="https://cdn.rebrickable.com/media/sets/76215-1.jpg" alt="Lego Set Black Panther"></figure>
+          <div class="card-body">
+            <h2 class="card-title">Black Panther</h2>
+            <p>This set was released in America (USA/CAN) by Marvel Studios in loving memory of main movie character Chadwick BoseMan who died in 2022.</p>
+          <div class="card-actions justify-end"><a href="/lego/sets/76215-1" class="btn btn-secondary">View</a></div>
+          </div>
+        </div>
+      </div>
+
+
+
+       <!-- Card 3 -->
+       <div class="hover:scale-125 transition duration-300">
+         <div class="card bg-base 100 shadow-xl">
+           <figure><img src="https://cdn.rebrickable.com/media/sets/76220-1.jpg" alt="Lego Set Batman versus Harley Quinn"></figure>
+         <div class="card-body">
+           <h2 class="card-title">Batman versus Harley Quinn</h2>
+           <p>This set was released in America (USA/CAN) by DC-Comics Super Heroes in 2022. It was never released in Europe.</p>
+         <div class="card-actions justify-end"><a href="/lego/sets/76220-1" class="btn btn-secondary">View</a></div>
+        </div>
+       </div>
+      </div>
+
+  </div>
+</div>
+
+    <!-- include footer.ejs-->
+    <%-include('./partials/footer.ejs') %>
+
+</body>
+</html>

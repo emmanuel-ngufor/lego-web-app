@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Set</title>
+    <link rel="stylesheet" href="/css/main.css" />
+</head>
+
+<body tabindex="-1">
+
+    <!-- include navbar.ejs-->
+    <%- include('partials/navbar', {page: '/lego/addSet'}) %>
+
+    <div class="container mx-auto p-4">
+        <div class="hero bg-base-200 rounded-lg p-6">
+            <div class="hero-content text-center ">
+                <div class="max-w-md">
+                    <h1 class="text-5xl font-bold">Add Set</h1>
+                    <p class="py-6">Unlock your potential by adding a set to the Lego collection</p>
+                </div>
+            </div>
+        </div>
+    
+
+    <!-- Form -->
+     <div class="max-w-md mx-auto p-4"> 
+        <form method="post" action="/lego/addSet" enctype="application/x-www-form-urlencoded">
+
+            <!-- Form controls -->
+            <div class="grid grid-cols-1 gap-4">
+                <!-- Name -->
+                <div class="form-control">
+                    <label class="label">
+                        <span class="label-text">Name</span>
+                    </label>
+                    <input type="text" name="name" placeholder="Set Name" class="input input-bordered" required />
+                </div>
+
+                <!-- Year -->
+                <div class="form-control">
+                    <label class="label">
+                        <span class="label-text">Year</span>
+                    </label>
+                    <input type="number" name="year" placeholder="Year" class="input input-bordered" required />
+                </div>
+
+                <!-- Number of Parts -->
+                <div class="form-control">
+                    <label class="label">
+                        <span class="label-text">Number of Parts</span>
+                    </label>
+                    <input type="number" name="num_parts" placeholder="Number of Parts" class="input input-bordered" required />
+                </div>
+
+                <!-- Image URL -->
+                <div class="form-control">
+                    <label class="label">
+                        <span class="label-text">Image URL</span>
+                    </label>
+                    <input type="url" name="img_url" placeholder="Image URL" class="input input-bordered" required />
+                </div>
+
+                <!-- Theme -->
+                <div class="form-control">
+                    <label class="label">
+                        <span class="label-text">Theme</span>
+                    </label>
+                    <select name="theme_id" class="select select-bordered w-full" required>
+                        <option disabled selected>Choose a theme</option>
+                        <% themes.forEach(theme => { %>
+                            <option value="<%= theme.id %>"><%= theme.name %></option>
+                        <% }) %>
+                    </select>
+                </div>
+
+                <!-- Set Number -->
+                <div class="form-control">
+                    <label class="label">
+                        <span class="label-text">Set Number</span>
+                    </label>
+                    <input type="text" name="set_num" placeholder="Set Number" class="input input-bordered" required />
+                </div>
+
+                <!-- Submit Button -->
+                <div class="form-control mt-6">
+                    <button class="btn btn-secondary w-full" type="submit">Submit </button>
+                </div>
+            </div>
+
+        </form>
+     </div> 
+</div>
+
+    <!-- include footer.ejs-->
+    <%- include('./partials/footer.ejs') %>
+
+</body>
+
+</html>

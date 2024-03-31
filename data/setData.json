@@ -1,0 +1,386 @@
+[
+    {
+        "set_num": "001-1",
+        "name": "Gears",
+        "year": "1965",
+        "theme_id": "1",
+        "num_parts": "43",
+        "img_url": "https://cdn.rebrickable.com/media/sets/001-1.jpg"
+    },
+    {
+        "set_num": "76205-1",
+        "name": "Gargantos Showdown",
+        "year": "2022",
+        "theme_id": "696",
+        "num_parts": "264",
+        "img_url": "https://cdn.rebrickable.com/media/sets/76205-1.jpg"
+    },
+    {
+        "set_num": "76206-1",
+        "name": "Iron Man Figure",
+        "year": "2022",
+        "theme_id": "696",
+        "num_parts": "381",
+        "img_url": "https://cdn.rebrickable.com/media/sets/76206-1.jpg"
+    },
+    {
+        "set_num": "76207-1",
+        "name": "Attack on New Asgard",
+        "year": "2022",
+        "theme_id": "696",
+        "num_parts": "159",
+        "img_url": "https://cdn.rebrickable.com/media/sets/76207-1.jpg"
+    },
+    {
+        "set_num": "76208-1",
+        "name": "The Goat Boat",
+        "year": "2022",
+        "theme_id": "696",
+        "num_parts": "564",
+        "img_url": "https://cdn.rebrickable.com/media/sets/76208-1.jpg"
+    },
+    {
+        "set_num": "76209-1",
+        "name": "Thor's Hammer",
+        "year": "2022",
+        "theme_id": "696",
+        "num_parts": "979",
+        "img_url": "https://cdn.rebrickable.com/media/sets/76209-1.jpg"
+    },
+    {
+        "set_num": "76210-1",
+        "name": "Hulkbuster",
+        "year": "2022",
+        "theme_id": "696",
+        "num_parts": "4049",
+        "img_url": "https://cdn.rebrickable.com/media/sets/76210-1.jpg"
+    },
+    {
+        "set_num": "7621-1",
+        "name": "Indiana Jones and the Lost Tomb",
+        "year": "2008",
+        "theme_id": "264",
+        "num_parts": "277",
+        "img_url": "https://cdn.rebrickable.com/media/sets/7621-1.jpg"
+    },
+    {
+        "set_num": "76211-1",
+        "name": "Shuri's Sunbird",
+        "year": "2022",
+        "theme_id": "696",
+        "num_parts": "355",
+        "img_url": "https://cdn.rebrickable.com/media/sets/76211-1.jpg"
+    },
+    {
+        "set_num": "76212-1",
+        "name": "Shuri's Lab",
+        "year": "2022",
+        "theme_id": "696",
+        "num_parts": "58",
+        "img_url": "https://cdn.rebrickable.com/media/sets/76212-1.jpg"
+    },
+    {
+        "set_num": "76213-1",
+        "name": "King Namor's Throne Room",
+        "year": "2022",
+        "theme_id": "696",
+        "num_parts": "355",
+        "img_url": "https://cdn.rebrickable.com/media/sets/76213-1.jpg"
+    },
+    {
+        "set_num": "76214-1",
+        "name": "Black Panther: War on the Water",
+        "year": "2022",
+        "theme_id": "696",
+        "num_parts": "553",
+        "img_url": "https://cdn.rebrickable.com/media/sets/76214-1.jpg"
+    },
+    {
+        "set_num": "76215-1",
+        "name": "Black Panther",
+        "year": "2022",
+        "theme_id": "696",
+        "num_parts": "2961",
+        "img_url": "https://cdn.rebrickable.com/media/sets/76215-1.jpg"
+    },
+    {
+        "set_num": "76216-1",
+        "name": "Iron Man Armory",
+        "year": "2022",
+        "theme_id": "696",
+        "num_parts": "509",
+        "img_url": "https://cdn.rebrickable.com/media/sets/76216-1.jpg"
+    },
+    {
+        "set_num": "76217-1",
+        "name": "I Am Groot",
+        "year": "2022",
+        "theme_id": "704",
+        "num_parts": "476",
+        "img_url": "https://cdn.rebrickable.com/media/sets/76217-1.jpg"
+    },
+    {
+        "set_num": "76218-1",
+        "name": "Sanctum Sanctorum",
+        "year": "2022",
+        "theme_id": "696",
+        "num_parts": "2713",
+        "img_url": "https://cdn.rebrickable.com/media/sets/76218-1.jpg"
+    },
+    {
+        "set_num": "76219-1",
+        "name": "Spider-Man & Green Goblin Mech Battle",
+        "year": "2022",
+        "theme_id": "706",
+        "num_parts": "296",
+        "img_url": "https://cdn.rebrickable.com/media/sets/76219-1.jpg"
+    },
+    {
+        "set_num": "76220-1",
+        "name": "Batman versus Harley Quinn",
+        "year": "2022",
+        "theme_id": "697",
+        "num_parts": "42",
+        "img_url": "https://cdn.rebrickable.com/media/sets/76220-1.jpg"
+    },
+    {
+        "set_num": "7622-1",
+        "name": "Race for the Stolen Treasure",
+        "year": "2008",
+        "theme_id": "264",
+        "num_parts": "275",
+        "img_url": "https://cdn.rebrickable.com/media/sets/7622-1.jpg"
+    },
+    {
+        "set_num": "76223-1",
+        "name": "Nano Gauntlet",
+        "year": "2022",
+        "theme_id": "696",
+        "num_parts": "675",
+        "img_url": "https://cdn.rebrickable.com/media/sets/76223-1.jpg"
+    },
+    {
+        "set_num": "76224-1",
+        "name": "Batmobile: Batman vs. The Joker Chase",
+        "year": "2023",
+        "theme_id": "697",
+        "num_parts": "438",
+        "img_url": "https://cdn.rebrickable.com/media/sets/76224-1.jpg"
+    },
+    {
+        "set_num": "76225-1",
+        "name": "Miles Morales",
+        "year": "2022",
+        "theme_id": "706",
+        "num_parts": "242",
+        "img_url": "https://cdn.rebrickable.com/media/sets/76225-1.jpg"
+    },
+    {
+        "set_num": "0011-2",
+        "name": "Town Mini-Figures",
+        "year": "1979",
+        "theme_id": "67",
+        "num_parts": "12",
+        "img_url": "https://cdn.rebrickable.com/media/sets/0011-2.jpg"
+    },
+    {
+        "set_num": "0011-3",
+        "name": "Castle 2 for 1 Bonus Offer",
+        "year": "1987",
+        "theme_id": "199",
+        "num_parts": "0",
+        "img_url": "https://cdn.rebrickable.com/media/sets/0011-3.jpg"
+    },
+    {
+        "set_num": "0012-1",
+        "name": "Space Mini-Figures",
+        "year": "1979",
+        "theme_id": "143",
+        "num_parts": "12",
+        "img_url": "https://cdn.rebrickable.com/media/sets/0012-1.jpg"
+    },
+    {
+        "set_num": "0013-1",
+        "name": "Space Mini-Figures",
+        "year": "1979",
+        "theme_id": "143",
+        "num_parts": "12",
+        "img_url": "https://cdn.rebrickable.com/media/sets/0013-1.jpg"
+    },
+    {
+        "set_num": "0016-1",
+        "name": "Castle Mini Figures",
+        "year": "1979",
+        "theme_id": "189",
+        "num_parts": "15",
+        "img_url": "https://cdn.rebrickable.com/media/sets/0016-1.jpg"
+    },
+    {
+        "set_num": "002-1",
+        "name": "4.5V Samsonite Gears Motor Set",
+        "year": "1965",
+        "theme_id": "1",
+        "num_parts": "3",
+        "img_url": "https://cdn.rebrickable.com/media/sets/002-1.jpg"
+    },
+    {
+        "set_num": "002253963-1",
+        "name": "Legend of Chima: Corbeaux et Gorilles",
+        "year": "2013",
+        "theme_id": "497",
+        "num_parts": "4",
+        "img_url": "https://cdn.rebrickable.com/media/sets/002253963-1.jpg"
+    },
+    {
+        "set_num": "003-1",
+        "name": "Master Mechanic Set",
+        "year": "1966",
+        "theme_id": "366",
+        "num_parts": "403",
+        "img_url": "https://cdn.rebrickable.com/media/sets/003-1.jpg"
+    },
+    {
+        "set_num": "005-1",
+        "name": "Basic Building Set in Cardboard",
+        "year": "1965",
+        "theme_id": "366",
+        "num_parts": "35",
+        "img_url": "https://cdn.rebrickable.com/media/sets/005-1.jpg"
+    },
+    {
+        "set_num": "005-2",
+        "name": "Discovery Set",
+        "year": "1967",
+        "theme_id": "366",
+        "num_parts": "0",
+        "img_url": "https://cdn.rebrickable.com/media/sets/005-2.jpg"
+    },
+    {
+        "set_num": "00-6",
+        "name": "Special Offer",
+        "year": "1985",
+        "theme_id": "67",
+        "num_parts": "0",
+        "img_url": "https://cdn.rebrickable.com/media/sets/00-6.jpg"
+    },
+    {
+        "set_num": "010-1",
+        "name": "Basic Building Set in Cardboard",
+        "year": "1965",
+        "theme_id": "366",
+        "num_parts": "57",
+        "img_url": "https://cdn.rebrickable.com/media/sets/010-1.jpg"
+    },
+    {
+        "set_num": "010-2",
+        "name": "Pre-School Set",
+        "year": "1973",
+        "theme_id": "505",
+        "num_parts": "18",
+        "img_url": "https://cdn.rebrickable.com/media/sets/010-2.jpg"
+    },
+    {
+        "set_num": "010-3",
+        "name": "Basic Building Set",
+        "year": "1968",
+        "theme_id": "366",
+        "num_parts": "77",
+        "img_url": "https://cdn.rebrickable.com/media/sets/010-3.jpg"
+    },
+    {
+        "set_num": "010423-1",
+        "name": "The Majestic Horse",
+        "year": "2023",
+        "theme_id": "721",
+        "num_parts": "0",
+        "img_url": "https://cdn.rebrickable.com/media/sets/010423-1.jpg"
+    },
+    {
+        "set_num": "01-1",
+        "name": "Chain Links",
+        "year": "1980",
+        "theme_id": "453",
+        "num_parts": "25",
+        "img_url": "https://cdn.rebrickable.com/media/sets/01-1.jpg"
+    },
+    {
+        "set_num": "011-1",
+        "name": "Basic Building Set",
+        "year": "1968",
+        "theme_id": "366",
+        "num_parts": "145",
+        "img_url": "https://cdn.rebrickable.com/media/sets/011-1.jpg"
+    },
+    {
+        "set_num": "01-2",
+        "name": "Bulldozer Chain Links",
+        "year": "1982",
+        "theme_id": "453",
+        "num_parts": "50",
+        "img_url": "https://cdn.rebrickable.com/media/sets/01-2.jpg"
+    },
+    {
+        "set_num": "02-1",
+        "name": "Extra Large Tires & Hubs",
+        "year": "1982",
+        "theme_id": "453",
+        "num_parts": "4",
+        "img_url": "https://cdn.rebrickable.com/media/sets/02-1.jpg"
+    },
+    {
+        "set_num": "021-1",
+        "name": "Wheel Set",
+        "year": "1966",
+        "theme_id": "366",
+        "num_parts": "183",
+        "img_url": "https://cdn.rebrickable.com/media/sets/021-1.jpg"
+    },
+    {
+        "set_num": "02-2",
+        "name": "Digger Bucket Assembly",
+        "year": "1980",
+        "theme_id": "453",
+        "num_parts": "3",
+        "img_url": "https://cdn.rebrickable.com/media/sets/02-2.jpg"
+    },
+    {
+        "set_num": "022-1",
+        "name": "Basic Building Set",
+        "year": "1968",
+        "theme_id": "366",
+        "num_parts": "110",
+        "img_url": "https://cdn.rebrickable.com/media/sets/022-1.jpg"
+    },
+    {
+        "set_num": "0241187567-1",
+        "name": "Ninjago: Build Your Own Adventure",
+        "year": "2015",
+        "theme_id": "497",
+        "num_parts": "74",
+        "img_url": "https://cdn.rebrickable.com/media/sets/0241187567-1.jpg"
+    },
+    {
+        "set_num": "0241357594-1",
+        "name": "Star Wars: Build Your Own Adventure: Galactic Missions",
+        "year": "2019",
+        "theme_id": "497",
+        "num_parts": "70",
+        "img_url": "https://cdn.rebrickable.com/media/sets/0241357594-1.jpg"
+    },
+    {
+        "set_num": "028-1",
+        "name": "Nursery Furniture",
+        "year": "1979",
+        "theme_id": "652",
+        "num_parts": "7",
+        "img_url": "https://cdn.rebrickable.com/media/sets/028-1.jpg"
+    },
+    {
+        "set_num": "03093-1",
+        "name": "The Race to Build It Board Game",
+        "year": "1999",
+        "theme_id": "674",
+        "num_parts": "77",
+        "img_url": "https://cdn.rebrickable.com/media/sets/03093-1.jpg"
+    }
+]

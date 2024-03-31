@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Set - <%= set.name %> - Lego Collection</title>
+    <link rel="stylesheet" href="/css/main.css" />
+</head>
+
+<body tabindex="-1">
+
+    <!-- include navbar.ejs-->
+    <%- include('partials/navbar', {page: '' }) %>
+
+    <div class="container mx-auto p-4">
+        <div class="hero bg-base-200 rounded-lg p-6">
+            <div class="hero-content text-center ">
+                <div class="max-w-md">
+                    <h1 class="text-5xl font-bold">Edit Set - <%= set.name %></h1>
+                    <p class="py-6">Refine Your Collection: Edit Lego Set Details!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Form -->
+    <div class="max-w-md mx-auto p-4">
+        <form method="post" action="/lego/editSet">
+
+            <!-- Form controls -->
+            <div class="grid grid-cols-1 gap-4">
+                <!-- Name -->
+                <div class="form-control">
+                    <label class="label">
+                        <span class="label-text">Name</span>
+                    </label>
+                    <input type="text" name="name" placeholder="Set Name" class="input input-bordered" value="<%= set.name %>" required />
+                </div>
+
+                <!-- Year -->
+                <div class="form-control">
+                    <label class="label">
+                        <span class="label-text">Year</span>
+                    </label>
+                    <input type="number" name="year" placeholder="Year" class="input input-bordered" value="<%= set.year %>" required />
+                </div>
+
+                <!-- Number of Parts -->
+                <div class="form-control">
+                    <label class="label">
+                        <span class="label-text">Number of Parts</span>
+                    </label>
+                    <input type="number" name="num_parts" placeholder="Number of Parts" class="input input-bordered" value="<%= set.num_parts %>" required />
+                </div>
+
+                <!-- Image URL -->
+                <div class="form-control">
+                    <label class="label">
+                        <span class="label-text">Image URL</span>
+                    </label>
+                    <input type="url" name="img_url" placeholder="Image URL" class="input input-bordered" value="<%= set.img_url %>" required />
+                </div>
+
+                <!-- Theme -->
+                <div class="form-control">
+                    <label class="label">
+                        <span class="label-text">Theme</span>
+                    </label>
+                    <select name="theme_id" class="select select-bordered w-full" required>
+                        <option disabled selected>Choose a theme</option>
+                        <% themes.forEach(theme => { %>
+                            <option value="<%= theme.id %>" <%= (set.theme_id == theme.id) ? "selected" : "" %>><%= theme.name %></option>
+                        <% }) %>
+                    </select>
+                </div>
+
+                <!-- Set Number (read-only) -->
+                <div class="form-control">
+                    <label class="label">
+                        <span class="label-text">Set Number</span>
+                    </label>
+                    <input type="text" name="set_num" placeholder="Set Number" class="input input-bordered cursor-not-allowed" value="<%= set.set_num %>" readonly required />
+                </div>
+
+                <br><hr>
+                <!-- Submit Button -->
+                <div class=" flex items-center justify-between">
+                    <button class="btn btn-secondary" type="submit">Update Set</button>
+                    <a href="/lego/deleteSet/<%= set.set_num %>" class="btn btn-error " >Delete Set</a>
+                </div>
+            </div>
+
+        </form>
+
+    </div>
+
+    <!-- include footer.ejs-->
+    <%- include('./partials/footer.ejs') %>
+
+</body>
+
+</html>

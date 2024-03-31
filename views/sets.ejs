@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collection</title>
+    <link rel="stylesheet" href="/css/main.css" />
+</head>
+
+<body tabindex="-1">
+
+     <!-- include navbar.ejs-->
+  <%- include('partials/navbar', {page: '/lego/sets'}) %>
+
+  <div class="container mx-auto p-4">
+    <div class="hero bg-base-200 rounded-lg p-6">
+      <div class="hero-content text-center">
+        <div class="max-w-md">
+          <h1 class="text-5xl font-bold">Collection</h1>
+          <p class="py-6">From classic themes like space exploration and medieval castles to modern favorites like superheroes and movie tie-ins,
+             there's something here for every builder.
+          </p>
+          <a href="/lego/sets?theme=Technic" class="btn btn-secondary btn-xs" >Technic</a>
+          <a href="/lego/sets?theme=Basic Set" class="btn btn-secondary btn-xs" >Basic Set</a>
+          <a href="/lego/sets?theme=Super Heroes Marvel" class="btn btn-secondary btn-xs" >Marvel Heroes</a>
+          <br/></br>Click theme to view collection
+        </div>
+    </div>
+   </div>  <br/></br>
+
+   
+ <!-- Display LEGO sets in a table -->
+ <div class="overflow-x-auto overflow-y-hidden">
+  <table class="table table-zebra">
+    <tbody>
+      <% sets.forEach(set => { %>
+        <tr>
+          <td> 
+            <div class="avatar"> 
+              <div class="w-32 h-32 rounded-lg bg-transparent bg-no-repeat bg-cover" style="background-image: url('<%= set.img_url %>');"></div> 
+            </div>
+          </td>
+          <td><%= set.name %>  ~ <a href="/lego/sets?theme=<%= set.Theme.name %>" class="btn btn-secondary btn-xs"><%= set.Theme.name %></a> </td>
+          <td>
+            <span class="font-bold">Year:  </span> <%= set.year %>  ~ <span class="font-bold">Parts: </span> <%= set.num_parts %>
+          </td>
+          <td><a href="/lego/sets/<%= set.set_num %>" class="btn btn-primary btn-xs">Details</a></td>
+        </tr>
+      <% }) %>
+    </tbody>
+  </table>
+
+    </div>
+  </div>
+
+    <!-- include footer.ejs-->
+    <%-include('./partials/footer.ejs') %>
+
+</body>
+</html>
