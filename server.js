@@ -8,7 +8,7 @@
  *
  *  Name: Emmanuel Sahfor Ngufor Student ID: 135801215 Date: April 7th 2024
  *
- *  Published URL: https://long-headscarf-bear.cyclic.app/
+ *  Published URL: https://shy-ruby-hare-tie.cyclic.app
  *
  ********************************************************************************/
 
