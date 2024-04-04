@@ -173,13 +173,12 @@ async function deleteSet(set_num) {
     await Set.destroy({
       where: { set_num: set_num }
     });
-
   } catch (err) {
     console.error(err.errors[0].message);
-
   }
 }
 
+//  export all the functions to the server.js
 module.exports = { initialize, getAllSets, getSetByNum, getSetsByTheme, addSet, getAllThemes, editSet, deleteSet};
 
 
