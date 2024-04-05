@@ -27,12 +27,10 @@ app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true })); // parse form data
 
 app.get("/", (req, res) => {
-  // res.status(200).sendFile(path.join(__dirname,"/views/home.html"));
   res.render("home");
 });
 
 app.get("/about", (req, res) => {
-  // res.status(200).sendFile(path.join(__dirname, "/views/about.html"));
   res.render("about");
 });
 
