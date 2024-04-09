@@ -2,7 +2,6 @@
 // const themeData = require("../data/themeData");
 // let sets = [];  No longer needed
 
-
 require("dotenv").config(); // Allows us to access the environment variables defined in .env file via process.env.DB_USER ...
 
 const Sequelize = require("sequelize");
@@ -24,9 +23,12 @@ let sequelize = new Sequelize(
 // Sequelize authenticate() and tell me if i was succesfully connected to my  DB or not!
 sequelize
   .authenticate()
-  .then(() => { console.log(`connection successful`) })
-  .catch((err) => { console.log(`connection failed`) });
-
+  .then(() => {
+    console.log(`connection successful`);
+  })
+  .catch((err) => {
+    console.log(`connection failed`);
+  });
 
 // Define the Theme model (table)
 const Theme = sequelize.define(
@@ -45,7 +47,8 @@ const Theme = sequelize.define(
 );
 
 // Define the Set model(table)
-const Set = sequelize.define("Set",
+const Set = sequelize.define(
+  "Set",
   {
     set_num: {
       type: Sequelize.STRING,
@@ -65,13 +68,12 @@ const Set = sequelize.define("Set",
 // Create the association between Set and Theme
 Set.belongsTo(Theme, { foreignKey: "theme_id" });
 
-
 /* Utilizes an async function to handle the asynchronous sequelize.sync() operation.
 The function returns a Promise that resolves if sequelize.sync() executes successfully, 
 and rejects with the error message if it encounters an error. */
-// initialize 
+// initialize
 function initialize() {
-  return new Promise(async(resolve, reject) => {
+  return new Promise(async (resolve, reject) => {
     try {
       await sequelize.sync();
       resolve();
@@ -86,16 +88,19 @@ which retrieves all sets from the database along with their associated themes.
 Resolves the returned Promise with the retrieved sets. */
 // getAllSets : SELECT * FROM sets
 function getAllSets() {
-  return new Promise(async(resolve, reject) => {
-    let sets = await Set.findAll({ include: [Theme] })
+  return new Promise(async (resolve, reject) => {
+    let sets = await Set.findAll({ include: [Theme] });
     resolve(sets);
   });
 }
 
 // getSetByNum : SELECT (...column names) FROM sets where set_num = setNum
 function getSetByNum(setNum) {
-  return new Promise(async(resolve, reject) => {
-    let foundSet = await Set.findAll({ include: [Theme], where: { set_num: setNum } });
+  return new Promise(async (resolve, reject) => {
+    let foundSet = await Set.findAll({
+      include: [Theme],
+      where: { set_num: setNum },
+    });
     if (foundSet.length > 0) {
       resolve(foundSet[0]);
     } else {
@@ -112,10 +117,10 @@ function getSetsByTheme(theme) {
       const foundSets = await Set.findAll({
         include: [Theme],
         where: {
-          '$Theme.name$': {
-            [Sequelize.Op.iLike]: `%${theme}%`
-          }
-        }
+          "$Theme.name$": {
+            [Sequelize.Op.iLike]: `%${theme}%`,
+          },
+        },
       });
 
       // Check if any sets were found
@@ -130,7 +135,7 @@ function getSetsByTheme(theme) {
   });
 }
 
-// addSet : INSERT INTO sets (...table names) VALUES (...params) 
+// addSet : INSERT INTO sets (...table names) VALUES (...params)
 async function addSet(setData) {
   try {
     // Create a new set using the Set model and the provided data
@@ -166,12 +171,11 @@ async function editSet(setNum, setData) {
   }
 }
 
-
 // deleteSet : DELETE FROM SETS WHERE set_num = set_num
 async function deleteSet(set_num) {
   try {
     await Set.destroy({
-      where: { set_num: set_num }
+      where: { set_num: set_num },
     });
   } catch (err) {
     console.error(err.errors[0].message);
@@ -179,14 +183,16 @@ async function deleteSet(set_num) {
 }
 
 //  export all the functions to the server.js
-module.exports = { initialize, getAllSets, getSetByNum, getSetsByTheme, addSet, getAllThemes, editSet, deleteSet};
-
-
-
-
-
-
-
+module.exports = {
+  initialize,
+  getAllSets,
+  getSetByNum,
+  getSetsByTheme,
+  addSet,
+  getAllThemes,
+  editSet,
+  deleteSet,
+};
 
 
 
@@ -199,7 +205,7 @@ module.exports = { initialize, getAllSets, getSetByNum, getSetsByTheme, addSet, 
 //   .then( async () => {
 //     try{
 //       await Theme.bulkCreate(themeData);
-//       await Set.bulkCreate(setData); 
+//       await Set.bulkCreate(setData);
 //       console.log("-----");
 //       console.log("data inserted successfully");
 //     }catch(err){
@@ -207,7 +213,7 @@ module.exports = { initialize, getAllSets, getSetByNum, getSetsByTheme, addSet, 
 //       console.log(err.message);
 //       // NOTE: If you receive the error:
 //       // insert or update on table "Sets" violates foreign key constraint //"Sets_theme_id_fkey"
-//       // it is because you have a "set" in your collection that has a "theme_id" that //does not exist in the "themeData".   
+//       // it is because you have a "set" in your collection that has a "theme_id" that //does not exist in the "themeData".
 //       // To fix this, use PgAdmin to delete the newly created "Themes" and "Sets" tables, //fix the error in your .json files and re-run this code
 //     }
 //     process.exit();
