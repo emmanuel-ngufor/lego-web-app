@@ -20,6 +20,7 @@ let sequelize = new Sequelize(
   }
 );
 
+
 // Sequelize authenticate() and tell me if i was succesfully connected to my  DB or not!
 sequelize
   .authenticate()
@@ -29,6 +30,7 @@ sequelize
   .catch((err) => {
     console.log(`connection failed`);
   });
+
 
 // Define the Theme model (table)
 const Theme = sequelize.define(
@@ -45,6 +47,7 @@ const Theme = sequelize.define(
     timestamps: false, // Disable createdAt and updatedAt fields
   }
 );
+
 
 // Define the Set model(table)
 const Set = sequelize.define(
@@ -65,8 +68,10 @@ const Set = sequelize.define(
   }
 );
 
+
 // Create the association between Set and Theme
 Set.belongsTo(Theme, { foreignKey: "theme_id" });
+
 
 /* Utilizes an async function to handle the asynchronous sequelize.sync() operation.
 The function returns a Promise that resolves if sequelize.sync() executes successfully, 
@@ -83,6 +88,7 @@ function initialize() {
   });
 }
 
+
 /* Uses an async function to await the result of Set.findAll({ include: [Theme] }), 
 which retrieves all sets from the database along with their associated themes.
 Resolves the returned Promise with the retrieved sets. */
@@ -93,6 +99,7 @@ function getAllSets() {
     resolve(sets);
   });
 }
+
 
 // getSetByNum : SELECT (...column names) FROM sets where set_num = setNum
 function getSetByNum(setNum) {
@@ -108,6 +115,7 @@ function getSetByNum(setNum) {
     }
   });
 }
+
 
 // SELECT  * FROM Sets WHERE theme_id = theme
 function getSetsByTheme(theme) {
@@ -135,6 +143,7 @@ function getSetsByTheme(theme) {
   });
 }
 
+
 // addSet : INSERT INTO sets (...table names) VALUES (...params)
 async function addSet(setData) {
   try {
@@ -147,6 +156,7 @@ async function addSet(setData) {
     return Promise.reject(err.errors[0].message);
   }
 }
+
 
 // getAllThemes : SELECT themes FROM themes
 async function getAllThemes() {
@@ -161,6 +171,7 @@ async function getAllThemes() {
   }
 }
 
+
 // editSet : UPDATE sets SET ... WHERE set_num = setNum
 async function editSet(setNum, setData) {
   try {
@@ -170,6 +181,7 @@ async function editSet(setNum, setData) {
     return Promise.reject(err.errors[0].message);
   }
 }
+
 
 // deleteSet : DELETE FROM SETS WHERE set_num = set_num
 async function deleteSet(set_num) {
@@ -181,6 +193,7 @@ async function deleteSet(set_num) {
     console.error(err.errors[0].message);
   }
 }
+
 
 //  export all the functions to the server.js
 module.exports = {

@@ -181,6 +181,7 @@ app.get("/lego/addSet", ensureLogin, async (req, res) => {
   }
 });
 
+
 // POST /lego/addSet
 app.post("/lego/addSet", ensureLogin, async (req, res) => {
   try {
@@ -192,6 +193,7 @@ app.post("/lego/addSet", ensureLogin, async (req, res) => {
     });
   }
 });
+
 
 // GET  "/lego/editSet/:num"
 app.get("/lego/editSet/:num", ensureLogin, async (req, res) => {
@@ -205,6 +207,7 @@ app.get("/lego/editSet/:num", ensureLogin, async (req, res) => {
   }
 });
 
+
 //  POST /lego/editSet
 app.post("/lego/editSet", ensureLogin, async (req, res) => {
   try {
@@ -216,6 +219,7 @@ app.post("/lego/editSet", ensureLogin, async (req, res) => {
     });
   }
 });
+
 
 // DELETE /lego/deleteSet/:num
 app.get("/lego/deleteSet/:num", ensureLogin, async (req, res) => {
@@ -229,6 +233,7 @@ app.get("/lego/deleteSet/:num", ensureLogin, async (req, res) => {
   }
 });
 
+
 // Handles any routes that are not defined above
 // 404 pages - not found - Always goes at the bottom
 app.use((req, res) => {
@@ -237,6 +242,7 @@ app.use((req, res) => {
       "I'm Sorry, we're unable to find the page you were looking for (︶︹︺)",
   });
 });
+
 
 // Starting up the server
 legoData
