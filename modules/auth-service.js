@@ -3,6 +3,7 @@ const mongoose = require("mongoose");  // require the mongoose module
 let Schema = mongoose.Schema;          // variable to hold the schema object, which is a class for defining the structure of the model
 require("dotenv").config();            // load environment variables from the .env file via process.env
 
+// Create a new user schema object using mongoose's Schema constructor
 // Defining the user model
 let userSchema = new Schema({
   userName: { type: String, unique: true },
@@ -16,7 +17,9 @@ let userSchema = new Schema({
   ],
 });
 
+
 let User; // To be defined on new connection (see initialize)
+
 
 /* initialize()
 This initialize function ensures that we establish a connection to our MongoDB instance using the provided connection string from the .env file.
@@ -35,6 +38,8 @@ function initialize() {
     });
   });
 }
+
+
 
 // registerUser
 function registerUser(userData) {
@@ -80,16 +85,16 @@ function checkUser(userData) {
           // .find always return with array. Due to that, when we use .find, we have to specify the first unique data with users[0]
           // others [1][2] and so on are empty.
           bcrypt.compare(userData.password, users[0].password).then((res) => {
-            //(users.password !== bcrypt.hash(userData.password)) not this. use compare method
+            // (users.password !== bcrypt.hash(userData.password)) not this. use compare method
             if (res == true) {
               // .compare method return bool
               if (users[0].loginHistory.length == 8) {
-                users[0].loginHistory.pop(); // remove the last elem from the array
+                users[0].loginHistory.pop(); // remove the last element from the array
               }
               users[0].loginHistory.unshift({
                 dateTime: new Date().toString(),
                 userAgent: userData.userAgent,
-              }); //add elem in the begging of array. adjust the length as well
+              }); // add element in the begging of array. Adjust the length as well
               User.updateOne(
                 { userName: users[0].userName },
                 { $set: { loginHistory: users[0].loginHistory } }
