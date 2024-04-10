@@ -6,7 +6,9 @@
  *
  *  https://www.senecacollege.ca/about/policies/academic-integrity-policy.html
  *
- *  Name: Emmanuel Sahfor Ngufor Student ID: 135801215 Date: April 15th 2024
+ *  Name: Emmanuel Sahfor Ngufor Student ID: 135801215 Date: April 17th 2024
+ *
+ *  GitHub Link : https://github.com/emmanuel-ngufor/lego-web-app
  *
  *  Published URL: https://shy-ruby-hare-tie.cyclic.app
  *
