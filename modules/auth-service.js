@@ -65,6 +65,8 @@ function registerUser(userData) {
   });
 }
 
+
+
 function checkUser(userData) {
   return new Promise((resolve, reject) => {
     User.find({ userName: userData.userName })
