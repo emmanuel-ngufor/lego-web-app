@@ -1,16 +1,11 @@
 /********************************************************************************
- *  WEB322 – Assignment 06
- *
- *  I declare that this assignment is my own work in accordance with Seneca's
- *  Academic Integrity Policy:
- *
- *  https://www.senecacollege.ca/about/policies/academic-integrity-policy.html
- *
- *  Name: Emmanuel Sahfor Ngufor Student ID: 135801215 Date: April 17th 2024
+ *  Name: Emmanuel Sahfor Ngufor 
+ *  Email : ngufor.emmanuel2000@gmail.com  
+ *  Date: April 17th 2024
  *
  *  GitHub Link : https://github.com/emmanuel-ngufor/lego-web-app
  *
- *  Published URL: https://shy-ruby-hare-tie.cyclic.app
+ *  Published URL: 
  *
  ********************************************************************************/
 
@@ -26,8 +21,10 @@ const HTTP_PORT = process.env.PORT || 8080;
 
 // set view engine for EJS
 app.set("view engine", "ejs");
+app.set('views', __dirname + '/views');      // ---> Changed due to vercel hosting
 
 app.use(express.static("public")); // Middleware to handle  static files like CSS and Images from public directory
+app.use(express.static(__dirname + '/public'));    // ---> Changed due to vercel hosting
 app.use(express.urlencoded({ extended: true })); // Middleware to parse form data : application/x-www-form-urlencoded
 
 // configure session middleware : setup client-sessions to handle sessions

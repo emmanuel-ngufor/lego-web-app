@@ -4,6 +4,7 @@
 
 require("dotenv").config(); // Allows us to access the environment variables defined in .env file via process.env.DB_USER ...
 
+require('pg'); // explicitly require the "pg" module  ------ change due to vercel
 const Sequelize = require("sequelize");
 // set up sequelize to point to our postgres database
 let sequelize = new Sequelize(
