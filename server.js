@@ -23,7 +23,7 @@ const HTTP_PORT = process.env.PORT || 8080;
 app.set("view engine", "ejs");
 app.set('views', __dirname + '/views');      // ---> Changed due to vercel hosting
 
-app.use(express.static("public")); // Middleware to handle  static files like CSS and Images from public directory
+// app.use(express.static("public")); // Middleware to handle  static files like CSS and Images from public directory
 app.use(express.static(__dirname + '/public'));    // ---> Changed due to vercel hosting
 app.use(express.urlencoded({ extended: true })); // Middleware to parse form data : application/x-www-form-urlencoded
 
