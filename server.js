@@ -5,7 +5,7 @@
  *
  *  GitHub Link : https://github.com/emmanuel-ngufor/lego-web-app
  *
- *  Published URL: 
+ *  Published URL: https://lego-web-app.vercel.app/
  *
  ********************************************************************************/
 
